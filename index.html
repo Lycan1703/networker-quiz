@@ -116,7 +116,7 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18);
         }
         .brand-logo {
-            max-height: 56px;
+            max-height: 96px;
             width: auto;
             object-fit: contain;
         }
@@ -361,9 +361,9 @@
         .quiz-header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             gap: 1rem;
-            margin-bottom: 1.75rem;
+            margin-bottom: 1rem;
         }
         .quiz-progress-label {
             font-size: 0.82rem;
@@ -803,11 +803,6 @@
     </header>
 
     <section class="hero">
-        <span class="eyebrow" aria-label="Evaluación gratuita">
-            <span class="dot" aria-hidden="true"></span>
-            Evaluación gratuita · 2 minutos
-        </span>
-
         <h1 class="main-title">
             Descubre qué tipo de <span class="accent">Networker</span> eres<br>
             y cómo <strong>alcanzar tu potencial</strong>.
@@ -868,7 +863,6 @@
             <!-- STEP 2: QUIZ -->
             <div id="step-quiz">
                 <div class="quiz-header">
-                    <span class="quiz-progress-label">Evaluación en progreso</span>
                     <span class="quiz-progress-count" id="quiz-progress">Pregunta 1 de 7</span>
                 </div>
                 <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progreso del test">

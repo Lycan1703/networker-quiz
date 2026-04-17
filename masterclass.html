@@ -1039,6 +1039,20 @@
             userData.phone = fullPhone;
             userData.countryCode = iti.getSelectedCountryData ? iti.getSelectedCountryData().iso2 : '';
 
+            // Enviar lead a Make (non-blocking; no interrumpe el flujo si falla)
+            fetch('https://hook.us2.make.com/tfi858ykpk5ian8exytl7skpgug4352g', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                keepalive: true,
+                body: JSON.stringify({
+                    timestamp: new Date().toISOString(),
+                    name: userData.name,
+                    phone: userData.phone,
+                    country: userData.countryCode,
+                    page: 'masterclass'
+                })
+            }).catch(function(err) { console.warn('Webhook error:', err); });
+
             stepOptin.style.display = 'none';
             stepQuiz.style.display = 'block';
             initQuiz();
